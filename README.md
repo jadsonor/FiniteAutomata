@@ -1,3 +1,3 @@
-# Finite Automaton 
+# Finite Automata
 
-> Finite automaton implementation in Java
+> Finite automata implementation in Java
