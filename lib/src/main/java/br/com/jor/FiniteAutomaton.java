@@ -1,46 +1,31 @@
 package br.com.jor;
 
+import lombok.EqualsAndHashCode;
+import lombok.Getter;
+import lombok.RequiredArgsConstructor;
+import lombok.ToString;
+
 import java.util.Set;
 
+@RequiredArgsConstructor
+@ToString
+@EqualsAndHashCode
 public abstract class FiniteAutomaton {
 
+    @Getter
     protected final Set<State> states;
 
+    @Getter
     protected final Set<String> alphabet;
 
+    @Getter
     protected final Set<Transition> transitions;
 
+    @Getter
     protected final State initialState;
 
+    @Getter
     protected final Set<State> acceptanceStates;
 
-    public FiniteAutomaton(Set<State> states, Set<String> alphabet, Set<Transition> transitions, State initialState, Set<State> acceptanceStates) {
-        this.states = states;
-        this.alphabet = alphabet;
-        this.transitions = transitions;
-        this.initialState = initialState;
-        this.acceptanceStates = acceptanceStates;
-    }
-
     public abstract Boolean accept(String word);
-
-    public Set<State> getStates() {
-        return states;
-    }
-
-    public Set<String> getAlphabet() {
-        return alphabet;
-    }
-
-    public Set<Transition> getTransitions() {
-        return transitions;
-    }
-
-    public State getInitialState() {
-        return initialState;
-    }
-
-    public Set<State> getAcceptanceStates() {
-        return acceptanceStates;
-    }
 }

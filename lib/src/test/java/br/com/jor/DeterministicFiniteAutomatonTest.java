@@ -75,7 +75,7 @@ public class DeterministicFiniteAutomatonTest {
                 ""
         );
 
-        assertEquals("no transition defined for state State{name='q1'} and symbol 0", ex.getMessage());
+        assertEquals("no transition defined for state State(name=q1) and symbol 0", ex.getMessage());
 
     }
 
