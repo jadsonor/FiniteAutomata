@@ -1,3 +1,7 @@
 # Finite Automata
 
-> Finite automata implementation in Java
+> Finite automata library
+
+## Dependencies
+
+- Java 11
